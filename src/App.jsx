@@ -84,6 +84,10 @@ class App extends Component {
 					class: "devicon-javascript-plain"
 				},
 				{
+					name: "PHP",
+					class: "devicon-php-plain"
+				},
+				{
 					name: "Illustrator",
 					class: "devicon-illustrator-plain"
 				},
@@ -92,24 +96,29 @@ class App extends Component {
 					class: "devicon-photoshop-plain"
 				},
 				{
-					name: "WordPress",
-					class: "devicon-wordpress-plain"
-				},
-				{
 					name: "Git",
 					class: "devicon-git-plain"
 				},
 				{
-					name: "jQuery",
-					class: "devicon-jquery-plain"
+					name: "WordPress",
+					class: "devicon-wordpress-plain"
 				},
 				{
 					name: "Sass",
 					class: "devicon-sass-original"
 				},
+				
 				{
-					name: "ReactJS",
+					name: "jQuery",
+					class: "devicon-jquery-plain"
+				},
+				{
+					name: "React",
 					class: "devicon-react-original"
+				},
+				{
+					name: "Bootstrap",
+					class: "devicon-bootstrap-plain"
 				}
 			],
 			pieces: [
