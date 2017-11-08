@@ -1,0 +1,98 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	z-index: 99;
+	background-color: rgba(242, 242, 242, 0);
+	transition: 0.3s;
+	.flex {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.logo {
+		height: 70%;
+		&:hover {
+			animation: jiggle 0.2s;
+		}
+	}
+}
+
+.title-container {
+	text-decoration: none;
+	width: 50%;
+	color: $white;
+	transition: 0.2s;
+	&.flex {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	h2 {
+		font-size: 1.25em;
+	}
+	&:hover {
+		color: $less-white;
+	}
+	&.floating {
+		color: $black;
+		&:hover {
+			color: $salmon;
+		}
+	}
+}
+
+.title_outer {
+	width: 100%;
+	text-align: center;
+	font-size: $titleSize;
+	line-height: $titleSize * 1.5;
+	height: $titleSize * 1.5;
+	overflow: hidden;
+
+	.title_inner {
+		position: relative;
+		animation: rotate 8s ease-in-out infinite;
+	}
+
+	.element {
+		display: block;
+		font-weight: 300;
+		font-style: italic;
+	}
+
+}
+
+.title-nav {
+	ul {
+		li {
+			font-size: 1.25rem;
+			display: inline;
+			margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
+				}
+			a {
+				text-decoration: none;
+				color: $black;
+				border-bottom: 2px solid rgba(0,0,0,0);
+				padding-bottom: 5px;
+				transition: 0.2s;
+				&:hover {
+					color: $salmon;
+					border-bottom: 2px solid $salmon;
+				}
+			}
+		}
+	}
+}
+
+@keyframes jiggle {
+	25% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}

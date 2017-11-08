@@ -1,0 +1,32 @@
+footer {
+	padding: 5vh 0;
+	.flex {
+		flex-direction: column;
+	}
+	.social-icons {
+		&.flex {
+			flex-direction: row;
+		}
+		a {
+			height: 40px;
+			width: 40px;
+			background-color: $salmon;
+			border-radius: 50%;
+			transition: 0.2s;
+			margin-right: 30px;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				background-color: $green;
+			}
+			i {
+				color: $white;
+				font-size: 1.75em;
+			}
+		}
+	}
+	p {
+		margin-top: 20px;
+	}
+}
