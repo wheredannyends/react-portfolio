@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SmoothScroll from 'smooth-scroll';
 import Header from './components/Header';
-import NewHero from './components/NewHero';
+import Hero from './components/Hero';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
@@ -44,12 +44,6 @@ class App extends Component {
 		});
 		
 		this.state = {
-			jobTitles: [
-				"ux/ui designer",
-				"front-end web developer",
-				"digital designer",
-				"your new best friend"
-			],
 			process: [
 				{
 					heading: "UX/UI Design",
@@ -195,7 +189,7 @@ class App extends Component {
 		return (
 			<main className="app">
 				<Header />
-				<NewHero />
+				<Hero />
 				<About
 					process={this.state.process}
 					skills={this.state.skills}

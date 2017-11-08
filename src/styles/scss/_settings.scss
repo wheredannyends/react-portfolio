@@ -1,9 +1,22 @@
+/* COLORS */
+
+$white: #f2f2f2;
+$less-white: #e5e5e5;
+$black: #363636;
+$salmon: #fe8a83;
+$green: #59b4aa;
+$purple: #caaec2;
+
+
+/* SETTINGS */
+
 body {
 	background-color: $white;
 	font-family: 'Lato', 'Helvetica', sans-serif;
 	font-weight: 300;
 	color: $black;
 }
+
 .wrap {
 	max-width: 1140px;
 	width: 95%;

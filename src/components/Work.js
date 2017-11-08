@@ -5,12 +5,6 @@ class Work extends Component {
 	render() {
 		var piecesItems = this.props.pieces.map((obj, i)=>{
 			var item = this.props.pieces[i];
-			var piecesTech = this.props.pieces[i].tech.map((obj, t)=>{
-				var techItem = this.props.pieces[i].tech[t];
-				return (
-					<i className={techItem} key={t} />
-				)
-			});
 			
 			return (
 				<article className="pieces-card" key={i}>
