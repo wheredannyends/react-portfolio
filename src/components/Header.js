@@ -7,7 +7,7 @@ class Header extends Component {
 				<div className="wrap flex">
 					<a className="title-container flex" id="header-title" href="#hero">
 						<h1>Danny Burton</h1>
-						<h5>web designer</h5>
+						<h2>web designer</h2>
 					</a>
 
 					<nav className="title-nav">
