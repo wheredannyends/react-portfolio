@@ -5,7 +5,7 @@ class Header extends Component {
 		return (
 			<header className="header" id="header">
 				<div className="wrap flex">
-					<a className="title-container flex" id="header-title" href="#hero">
+					<a className="title-container flex" id="header-title" href="#">
 						<h1>Danny Burton</h1>
 						<h2>web designer</h2>
 					</a>

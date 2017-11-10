@@ -52,10 +52,10 @@ class App extends Component {
 					description: "I design simple, intuitive interfaces that get the end-user from point A to point B",
 				},
 				{
-					heading: "Development",
+					heading: "Web Development",
 					icon: "ion ion-code-working",
 					iconEffect: "icon-spin",
-					description: "I write scalable code to build responsive websites that work every device.",
+					description: "I write efficient code to build responsive websites that work on every device.",
 				},
 				{
 					heading: "Digital Design",

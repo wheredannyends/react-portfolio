@@ -669,7 +669,6 @@ p {
       width: 30%; } }
 .work {
   width: 100%;
-  background-color: #f2f2f2;
   padding: 10vh 0; }
   .work .flex {
     justify-content: center; }
