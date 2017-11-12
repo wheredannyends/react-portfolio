@@ -44,7 +44,7 @@ class App extends Component {
 		});
 		
 		this.state = {
-			process: [
+			services: [
 				{
 					heading: "UX/UI Design",
 					icon: "ion ion-paintbrush",
@@ -122,7 +122,6 @@ class App extends Component {
 					role: "Design, Development",
 					website: "http://daqi.dannyburton.ca",
 					description: "The website for DAQI Izakaya, a fictional restaurant, was built as the combined final project for 4 courses in my first term at BCIT. The requirements for the project spanned the entire design and development process, including UX research, UI design, and development.",
-					cover: "../img/logo.svg",
 					tech: [
 						"devicon-illustrator-plain",
 						"devicon-html5-plain",
@@ -139,7 +138,6 @@ class App extends Component {
 					role: "UI Design, Development",
 					website: "http://berriton.dannyburton.ca",
 					description: "Berriton was the combined final project for 4 courses in my second term at BCIT. I was in charge of the UI design and development aspects. Our team was required to create an interactive mobile web application and spanned the entire design and development process from ideation to deployment.",
-					cover: "../img/logo.svg",
 					tech: [
 						"devicon-illustrator-plain",
 						"devicon-html5-plain",
@@ -156,7 +154,6 @@ class App extends Component {
 					role: "Design, Development",
 					website: "http://www.analoguemoderne.com/",
 					description: "I was hired to build a website for Analogue Moderne, a Vancouver-based integrated media design and installation company. I worked with the client to design a website that captured the spirit of the company, and position them in the high-class home automation market.",
-					cover: "../img/logo.svg",
 					tech: [
 						"devicon-illustrator-plain",
 						"devicon-photoshop-plain",
@@ -191,7 +188,7 @@ class App extends Component {
 				<Header />
 				<Hero />
 				<About
-					process={this.state.process}
+					services={this.state.services}
 					skills={this.state.skills}
 				/>
 				<Work

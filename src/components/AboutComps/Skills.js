@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
-	
 	render() {
 		var iconBox = this.props.skills.map((obj, i)=>{
 			var item = this.props.skills[i];
 			return (
-				<div className="skills-icon" key={i}>
+				<article key={i}>
 					<div className="flex">
 						<i className={item.class} />
-						<p className="skills-icon-name">{item.name}</p>
+						<p>{item.name}</p>
 					</div>
-				</div>
+				</article>
 			)
 		});
 		

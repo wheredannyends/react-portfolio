@@ -10,7 +10,7 @@ class Header extends Component {
 						<h2>web designer</h2>
 					</a>
 
-					<nav className="title-nav">
+					<nav>
 						<ul>
 							<li>
 								<a href="#about">about</a>

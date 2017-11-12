@@ -11,80 +11,63 @@
 	transition: 0.3s;
 	.flex {
 		justify-content: space-between;
-		flex-direction: row;
-	}
-	.logo {
-		height: 70%;
-		&:hover {
-			animation: jiggle 0.2s;
-		}
-	}
-}
-
-.title-container {
-	text-decoration: none;
-	width: 50%;
-	color: $white;
-	transition: 0.2s;
-	&.flex {
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-	}
-	h2 {
-		font-size: 1.25em;
-	}
-	&:hover {
-		color: $less-white;
-	}
-	&.floating {
-		color: $black;
-		&:hover {
-			color: $salmon;
-		}
-	}
-}
-
-.title-nav {
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-			font-size: 1.25rem;
-			display: inline;
-			margin-right: 25px;
-				&:last-child {
-					margin-right: 0;
-				}
-			a {
-				text-decoration: none;
-				color: $black;
-				border-bottom: 2px solid rgba(0,0,0,0);
-				padding-bottom: 5px;
-				transition: 0.2s;
-				&:hover {
-					color: $salmon;
-					border-bottom: 2px solid $salmon;
-				}
-			}
-		}
-	}
-}
-
-@media only screen and (max-width: 700px) {
-	.header {
-		.flex {
+		@include break-point(700px) {
 			justify-content: center;
 		}
 	}
 	.title-container {
-		width: 100%;
+		text-decoration: none;
+		width: 50%;
+		color: $white;
 		&.flex {
-			align-items: center;
-			height: auto;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+		&:hover {
+			color: $less-white;
+		}
+		&.floating {
+			color: $black;
+			&:hover {
+				color: $salmon;
+			}
+		}
+		@include break-point(700px) {
+			width: 100%;
+			&.flex {
+				align-items: center;
+			}
 		}
 	}
-	.title-nav {
-		display: none;
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline;
+				font-size: 1.25rem;
+				margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					text-decoration: none;
+					color: $black;
+					border-bottom: 2px solid rgba(0, 0, 0, 0);
+					padding-bottom: 5px;
+					&:hover {
+						color: $salmon;
+						border-bottom: 2px solid $salmon;
+					}
+				}
+			}
+		}
+		@include break-point(700px) {
+			display: none;
+		}
 	}
 }

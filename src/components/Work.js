@@ -7,7 +7,7 @@ class Work extends Component {
 			var item = this.props.pieces[i];
 			
 			return (
-				<article className="pieces-card" key={i}>
+				<article key={i}>
 						<div className="flex">
 								<div className="pieces-card-left">
 										<div className="flex">

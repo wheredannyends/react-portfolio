@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 
 class Contact extends Component {
 	render() {
-		var cardItems = this.props.process.map((obj, i)=>{
+		var cardItems = this.props.services.map((obj, i)=>{
 			return (
-				<div key={i} className="process-card">
+				<article key={i}>
 					<div className="flex">
-						<i className={this.props.process[i].icon}/>
-						<h2>{this.props.process[i].heading}</h2>
-						<p>{this.props.process[i].description}</p>
+						<i className={this.props.services[i].icon}/>
+						<h2>{this.props.services[i].heading}</h2>
+						<p>{this.props.services[i].description}</p>
 					</div>
-				</div>
+				</article>
 			)
 		});
 		
 		return (
-			<div className="process">
+			<div className="services">
 				<div className="wrap flex">
 			
 					<h4>What I Do</h4>
