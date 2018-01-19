@@ -6,9 +6,11 @@ class Hero extends Component {
 		return (
 			<section className="hero" id="top">
 				<div className="wrap flex">
-						<h4 id="hero-title-1">I am a web designer based in Vancouver, Canada</h4>
-						<h5 id="hero-title-2">I design intuitive user experiences and bring them to life using modern web technologies. I can help your brand stand out from "the other guys."</h5>
-						<a href="#contact" className="button-primary" id="hero-button">How Can I Help You?</a>
+                    <h4 id="hero-title-1">I am a front end web developer based in Vancouver</h4>
+                    <h5 id="hero-title-2">
+                        I design and build clean and intuitive websites and web applications. I am proficient in industry-standard web technologies, and am always working on expanding my skillset.
+                    </h5>
+                    <a href="#work" className="button-primary" id="hero-button">View My Work</a>
 				</div>
 			</section>
 		);

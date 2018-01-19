@@ -46,16 +46,16 @@ class App extends Component {
 		this.state = {
 			services: [
 				{
-					heading: "UX/UI Design",
-					icon: "ion ion-paintbrush",
-					iconEffect: "icon-spin",
-					description: "I design simple, intuitive interfaces that get the end-user from point A to point B",
-				},
-				{
 					heading: "Web Development",
 					icon: "ion ion-code-working",
 					iconEffect: "icon-spin",
 					description: "I write efficient code to build responsive websites that work on every device.",
+				},
+				{
+					heading: "UX/UI Design",
+					icon: "ion ion-paintbrush",
+					iconEffect: "icon-spin",
+					description: "I design simple, intuitive interfaces that get the end-user from point A to point B",
 				},
 				{
 					heading: "Digital Design",
@@ -78,8 +78,8 @@ class App extends Component {
 					class: "devicon-javascript-plain"
 				},
 				{
-					name: "PHP",
-					class: "devicon-php-plain"
+					name: "React",
+					class: "devicon-react-original"
 				},
 				{
 					name: "Illustrator",
@@ -107,8 +107,8 @@ class App extends Component {
 					class: "devicon-jquery-plain"
 				},
 				{
-					name: "React",
-					class: "devicon-react-original"
+					name: "Node.js",
+					class: "devicon-nodejs-plain"
 				},
 				{
 					name: "Bootstrap",
@@ -116,22 +116,6 @@ class App extends Component {
 				}
 			],
 			pieces: [
-				{
-					title: "DAQI Izakaya",
-					subtitle: "Restaurant Website",
-					role: "Design, Development",
-					website: "http://daqi.dannyburton.ca",
-					description: "The website for DAQI Izakaya, a fictional restaurant, was built as the combined final project for 4 courses in my first term at BCIT. The requirements for the project spanned the entire design and development process, including UX research, UI design, and development.",
-					tech: [
-						"devicon-illustrator-plain",
-						"devicon-html5-plain",
-						"devicon-css3-plain",
-						"devicon-javascript-plain",
-						"devicon-jquery-plain",
-						"devicon-git-plain"
-					],
-					images: "daqi-mockup.png"
-				},
 				{
 					title: "Berriton",
 					subtitle: "Interactive Story Game",
@@ -147,6 +131,22 @@ class App extends Component {
 						"devicon-git-plain"
 					],
 					images: "berriton-mockup.png"
+				},
+				{
+					title: "DAQI Izakaya",
+					subtitle: "Restaurant Website",
+					role: "Design, Development",
+					website: "http://daqi.dannyburton.ca",
+					description: "The website for DAQI Izakaya, a fictional restaurant, was built as the combined final project for 4 courses in my first term at BCIT. The requirements for the project spanned the entire design and development process, including UX research, UI design, and development.",
+					tech: [
+						"devicon-illustrator-plain",
+						"devicon-html5-plain",
+						"devicon-css3-plain",
+						"devicon-javascript-plain",
+						"devicon-jquery-plain",
+						"devicon-git-plain"
+					],
+					images: "daqi-mockup.png"
 				},
 				{
 					title: "Analogue Moderne",

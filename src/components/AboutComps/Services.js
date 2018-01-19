@@ -21,7 +21,7 @@ class Contact extends Component {
 					<h4>What I Do</h4>
 			
 					<h3>
-						You want your brand to stand out? I can help with that.
+						I have a wide-range of abilities. Here is what I'm best at:
 					</h3>
 			
 					{cardItems}
