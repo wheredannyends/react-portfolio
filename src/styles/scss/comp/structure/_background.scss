@@ -1,0 +1,57 @@
+.background {
+	z-index: -1;
+	background-color: $white;
+	position: absolute;
+	left: 0;
+	height: 300%;
+	width: 100%;
+	display: block;
+	transition: all 1s ease-in-out;
+	div {
+		width: 100%;
+		height: 100vh;
+		&:nth-child(1) {
+			background-color: $primary;
+		}
+		&:nth-child(2) {
+			background: $white;
+		}
+		&:nth-child(3) {
+			background-color: $secondary;
+		}
+	}
+	article {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		transition: transform 1s ease-in-out;
+		&:nth-child(1) {
+			top: 95vh;
+			height: 40vh;
+			background-color: $primary;
+			clip-path: polygon(100% 0, 100% 100%, 50% 50%, 0 100%, 0 0);
+			&.contact-active {
+				transform: translateY(-30vh);
+			}
+		}
+		&:nth-child(2) {
+			top: 165vh;
+			height: 40vh;
+			background-color: $secondary;
+			clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+			&.contact-active {
+				transform: translateY(30vh);
+			}
+		}
+	}
+	&.bg-home,
+	&.bg-contact {
+		top: -100%;
+	}
+	&.bg-about {
+		top: 0;
+	}
+	&.bg-work {
+		top: -200%;
+	}
+}

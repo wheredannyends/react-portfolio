@@ -1,0 +1,70 @@
+.header {
+	height: 10vh;
+	.flex {
+		justify-content: space-between;
+	}
+	&.header-dark {
+		.navbar li {
+			color: $black;
+		}
+		.db-logo {
+			fill: $black;
+		}
+	}
+}
+
+.navbar {
+	list-style-type: none;
+	li {
+		font-weight: 500;
+		padding: 5px 2px;
+		display: inline;
+		margin-left: 20px;
+		cursor: pointer;
+		color: $white;
+		transition: all 0.5s;
+		&:hover {
+			color: $less-white;
+			border-bottom: 2px solid $less-white;
+		}
+	}
+	&.nav-active-1 {
+		li:nth-child(1) {
+			border-bottom: 2px solid $primary-light;
+		}
+	}
+	&.nav-active-2 {
+		li:nth-child(2) {
+			border-bottom: 2px solid $secondary-light;
+		}
+	}
+	&.nav-active-3 {
+		li:nth-child(3) {
+			border-bottom: 2px solid $less-white;
+		}
+	}
+}
+
+.db-logo {
+	height: 60%;
+	fill: $white;
+	cursor: pointer;
+	transition: all 0.5s;
+	&:hover {
+		fill: $less-white;
+		animation: db-logo-hover 0.6s forwards;
+	}
+}
+
+@keyframes db-logo-hover {
+	20% {
+		transform: rotate(-20deg);
+	}
+	40% {
+		transform: rotate(20deg);
+	}
+	
+	60% {
+		transform: rotate(-10deg);
+	}
+}

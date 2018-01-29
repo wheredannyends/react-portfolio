@@ -1,0 +1,12 @@
+.content {
+	width: 100vw;
+	height: 90vh;
+	transition: opacity 0.3s;
+	.flex {
+		flex-direction: column;
+	}
+	&.content-transition {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
