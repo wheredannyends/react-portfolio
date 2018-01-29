@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Header from './comp/structure/Header';
 import Background from './comp/structure/Background';
 import Content from './comp/structure/Content';
@@ -37,7 +38,9 @@ class App extends Component {
 	render() {
 		return (
 			<main className="main-container">
-				<Background curPage={this.state.curPage} />
+				<Background
+					curPage={this.state.curPage}
+				/>
 				<Header
 					navigate={this.navigate}
 					curPage={this.state.curPage}
