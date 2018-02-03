@@ -5,9 +5,8 @@ class Background extends Component {
 		super(props);
 		
 		this.state = {
-			clouds: [
-				'../../img/background/clouds-1.svg',
-			]
+			clouds: [1,2,3,4,5,6,7,8,9],
+			mountains: [1,2,3,4],
 		}
 	}
 	
@@ -17,7 +16,15 @@ class Background extends Component {
 			contactActive = "";
 		
 		var cloudRender = this.state.clouds.map((obj, i) => {
-			return <img src={require(obj)} alt="Clouds" />;
+			return (
+				<img key={i} src={require('../../img/background/clouds-' + obj + '.svg')} alt={i} />
+			)
+		});
+
+		var mountainRender = this.state.mountains.map((obj, i) => {
+			return (
+				<img key={i} src={require('../../img/background/mountains-' + obj + '.svg')} alt={i} />
+			)
 		});
 		
 		if (this.props.curPage === "contact") {
@@ -26,14 +33,16 @@ class Background extends Component {
 		
 		return (
 			<section className={"background" + curBg}>
-				<div className="bg-screen"></div>
-				<div className="bg-screen">
+				<div className={"bg-screen" + contactActive}></div>
+				<div className={"bg-screen" + contactActive}>
 					<div className={"bg-elements bg-clouds" + contactActive}>
 						{cloudRender}
 					</div>
-					<div className={"bg-elements bg-mountains" + contactActive}></div>
+					<div className={"bg-elements bg-mountains" + contactActive}>
+						{mountainRender}
+					</div>
 				</div>
-				<div className="bg-screen"></div>
+				<div className={"bg-screen" + contactActive}></div>
 			</section>
 		);
 	}

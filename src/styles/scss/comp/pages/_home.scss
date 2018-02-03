@@ -1,9 +1,17 @@
 .home {
-	height: 80vh;
+	opacity: 0;
+	transform: translateY(50px);
+	animation: home-appear 1s forwards;
 	h1 {
-		animation: title-hover 2s infinite;
 	}
 	h2 {
 		animation: title-hover 2s infinite;
+	}
+}
+
+@keyframes home-appear {
+	to {
+		opacity: 1;
+		transform: none;
 	}
 }

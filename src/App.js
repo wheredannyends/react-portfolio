@@ -9,30 +9,24 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			curPage: "home",
-			transitionActive: false,
+			curPage: "work",
+			pageTrans: false,
 		}
 	}
 	
 	navigate = (path) => {
-		if (path != this.state.curPage) {
+		if (path !== this.state.curPage) {
 			this.setState({
 				curPage: path,
-				transitionActive: true,
+				pageTrans: true,
 			});
 		}
-	}
-	
-	transitionBegin = () => {
-		this.setState({
-			transitionActive: true,
-		});
-	}
-	
-	transitionComplete = () => {
-		this.setState({
-			transitionActive: false,
-		});
+		
+		setTimeout(() => {
+			this.setState({
+				pageTrans: false,
+			});
+		}, 1000);
 	}
 	
 	render() {
@@ -42,14 +36,13 @@ class App extends Component {
 					curPage={this.state.curPage}
 				/>
 				<Header
-					navigate={this.navigate}
 					curPage={this.state.curPage}
-					transitionBegin={this.state.transitionBegin}
+					navigate={this.navigate}
 				/>
 				<Content
+					navigate={this.navigate}
 					curPage={this.state.curPage}
-					transitionActive={this.state.transitionActive}
-					transitionComplete={this.transitionComplete}
+					pageTrans={this.state.pageTrans}
 				/>
 			</main>
 		);

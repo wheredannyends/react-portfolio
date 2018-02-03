@@ -18,11 +18,31 @@ $cta-light: #E99488;
 $cta-dark: #A55043;
 
 
-$shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-$shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-$shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-$shadow-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-$shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+$shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12),
+0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16),
+0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19),
+0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25),
+0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-5: 0 19px 38px rgba(0, 0, 0, 0.30),
+0 15px 12px rgba(0, 0, 0, 0.22);
+
+$filter-shadow-1: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
+$filter-shadow-2: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.23));
+$filter-shadow-3: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.23));
+
+
+/* MIXINS */
+
+$media-mobile: 700px;
+
+@mixin media($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
 
 
 /* SETTINGS */
@@ -34,13 +54,13 @@ body {
 }
 
 .wrap {
-	max-width: 1140px;
-	width: 95%;
+	max-width: 1240px;
+	width: 100%;
 	margin: 0 auto;
 }
 
 .flex {
-	width: inherit;
+	width: 95%;
 	height: inherit;
 	display: flex;
 	justify-content: center;
@@ -56,20 +76,23 @@ body {
 /* BUTTONS */
 
 .button {
-	width: 200px;
-	height: 50px;
+	font-family: 'Lato', 'Helvetica', sans-serif;
+	font-weight: 500;
 	background-color: $cta;
-	padding: 0;
+	padding: 20px 40px;
 	text-align: center;
-	padding: 15px;
 	box-sizing: border-box;
 	text-decoration: none;
 	margin: 20px 0;
 	color: $white;
 	cursor: pointer;
-	box-shadow: 0 0 0 10px $white;
+	transition: all 0.2s;
+	border: none;
 	&:hover {
-		background-color: $primary;
+		background-color: $cta-light;
+	}
+	&:focus {
+		outline: none;
 	}
 }
 
@@ -93,21 +116,24 @@ h1 {
 	font-weight: 900;
 	font-size: 3.5rem;
 	text-transform: uppercase;
+	@include media($media-mobile) {
+		font-size: 2.5rem;
+	}
 }
 
 h2 {
 	font-weight: 400;
-	font-size: 2.5em;
+	font-size: 2.25em;
 	font-style: italic;
+	@include media($media-mobile) {
+		font-size: 1.7rem;
+	}
 }
 
 h3 {
-	font-style: italic;
-	padding: 0 20%;
-	margin-bottom: 50px;
-	width: 100%;
-	text-align: center;
-	line-height: 1.4em;
+	font-family: 'Lato', 'Helvetica', sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
 }
 
 @media only screen and (max-width:700px) {
@@ -131,10 +157,4 @@ h5 {
 
 p {
 	line-height: 1.5em;
-}
-
-/* MIXINS */
-
-@mixin break-point($width) {
-	@media screen and (max-width: $width) { @content; }
 }

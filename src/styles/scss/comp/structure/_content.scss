@@ -1,12 +1,20 @@
 .content {
 	width: 100vw;
-	height: 90vh;
-	transition: opacity 0.3s;
+	height: calc(100vh - 100px);
+	transition: all 0.3s;
 	.flex {
+		height: 100%;
 		flex-direction: column;
 	}
 	&.content-transition {
 		opacity: 0;
 		pointer-events: none;
 	}
+}
+
+.home,
+.about,
+.work,
+.contact {
+	height: 100%;
 }

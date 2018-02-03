@@ -1,0 +1,11 @@
+.work {
+	color: $white;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	>.flex {
+		height: auto;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 50px 0;
+	}
+}
