@@ -1,18 +1,11 @@
 .header {
 	opacity: 0;
 	height: 100px;
-	animation: header-appear 1s forwards .5s;
-	transform: translateY(50px);
-	.flex {
+	animation: header-appear .5s forwards .5s;
+	transform: translateY(-50px);
+	> .flex {
+		height: inherit;
 		justify-content: space-between;
-	}
-	&.header-dark {
-		.navbar li {
-			color: $black;
-		}
-		.db-logo {
-			fill: $black;
-		}
 	}
 }
 
@@ -34,17 +27,20 @@
 	}
 	&.nav-active-1 {
 		li:nth-child(1) {
+			color: $primary-light;
 			border-bottom: 2px solid $primary-light;
 		}
 	}
 	&.nav-active-2 {
 		li:nth-child(2) {
+			color: $secondary-light;
 			border-bottom: 2px solid $secondary-light;
 		}
 	}
 	&.nav-active-3 {
 		li:nth-child(3) {
-			border-bottom: 2px solid $less-white;
+			color: $primary-dark;
+			border-bottom: 2px solid $primary-dark;
 		}
 	}
 }
@@ -54,8 +50,8 @@
 	fill: $white;
 	cursor: pointer;
 	transition: all 0.5s;
+//	filter: $filter-shadow-1;
 	&:hover {
-		fill: $less-white;
 		animation: db-logo-hover 0.6s forwards;
 	}
 }
@@ -69,13 +65,19 @@
 
 @keyframes db-logo-hover {
 	20% {
-		transform: rotate(-20deg);
+		transform: rotate(-40deg) scale(.9);
+	}
+	30% {
+		transform: rotate(-40deg) scale(.9);
+		fill: $white;
+//		filter: $filter-shadow-1;
 	}
 	40% {
-		transform: rotate(20deg);
+		fill: $less-white;
+		transform: rotate(20deg) scale(1.1);
+//		filter: $filter-shadow-2;
 	}
-	
-	60% {
-		transform: rotate(-10deg);
+	100% {
+		fill: $less-white;
 	}
 }

@@ -12,20 +12,20 @@
 		height: 100vh;
 		transition: height 1s ease-in-out;
 		&:nth-child(1) {
-			background-color: $primary;
-			@include media($media-mobile) {
+			background: $primary;
+			@include media($mq-small) {
 				height: 110vh;
 			}
 		}
 		&:nth-child(2) {
-			background: $white;
-			@include media($media-mobile) {
+			background: linear-gradient(to bottom, $primary-light, $secondary);
+			@include media($mq-small) {
 				height: 80vh;
 			}
 		}
 		&:nth-child(3) {
-			background-color: $secondary;
-			@include media($media-mobile) {
+			background: $secondary;
+			@include media($mq-small) {
 				height: 110vh;
 			}
 		}
@@ -58,42 +58,42 @@
 				&:nth-child(1) {
 					right: -2vw;
 					width: 75vw;
-					animation: cloud-move-r 5s infinite .5s;
+//					animation: cloud-move-r 5s infinite .5s;
 				}
 				&:nth-child(2) {
 					left: -2vw;
 					width: 67vw;
-					animation: cloud-move-l 4s infinite .5s;
+//					animation: cloud-move-l 4s infinite .5s;
 				}
 				&:nth-child(3) {
 					right: -2vw;
 					width: 60vw;
-					animation: cloud-move-r 6s infinite;
-					@include media($media-mobile) {
+//					animation: cloud-move-r 6s infinite;
+					@include media($mq-small) {
 						display: none;
 					}
 				}
 				&:nth-child(4) {
 					left: -2vw;
 					width: 41vw;
-					animation: cloud-move-l 7s infinite .25s;
-					@include media($media-mobile) {
+//					animation: cloud-move-l 7s infinite .25s;
+					@include media($mq-small) {
 						display: none;
 					}
 				}
 				&:nth-child(5) {
 					left: 25vw;
 					width: 48vw;
-					animation: cloud-move-l 5s infinite .75s;
-					@include media($media-mobile) {
+//					animation: cloud-move-l 5s infinite .75s;
+					@include media($mq-small) {
 						display: none;
 					}
 				}
 				&:nth-child(6) {
 					right: -2vw;
 					width: 42vw;
-					animation: cloud-move-r 7s infinite .75s;
-					@include media($media-mobile) {
+//					animation: cloud-move-r 7s infinite .75s;
+					@include media($mq-small) {
 						display: none;
 					}
 				}
@@ -101,22 +101,22 @@
 					top: -2px;
 					left: -2vw;
 					width: 34vw;
-					animation: cloud-move-l 8s infinite 3s;
+//					animation: cloud-move-l 8s infinite 3s;
 				}
 				&:nth-child(8) {
 					top: -2px;
 					right: -2vw;
 					width: 34vw;
-					animation: cloud-move-r 9s infinite .25s;
+//					animation: cloud-move-r 9s infinite .25s;
 				}
 				&:nth-child(9) {
 					top: -2px;
 					left: 30vw;
 					width: 40vw;
-					animation: cloud-move-l 9s infinite;
+//					animation: cloud-move-l 9s infinite;
 				}
 			}
-			@include media($media-mobile) {
+			@include media($mq-small) {
 				top: 110vh;
 				&.contact-active {
 					transform: translateY(-50vh);
@@ -144,7 +144,7 @@
 					bottom: -1px;
 				}
 			}
-			@include media($media-mobile) {
+			@include media($mq-small) {
 				top: 190vh;
 				&.contact-active img {
 					transform: translateY(45vh);
@@ -159,7 +159,8 @@
 	&.bg-about {
 		top: 0;
 	}
-	&.bg-work {
+	&.bg-work,
+	&.bg-casestudy {
 		top: -200%;
 	}
 }

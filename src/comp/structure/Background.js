@@ -11,8 +11,7 @@ class Background extends Component {
 	}
 	
 	render() {
-		
-		let curBg = " bg-" + this.props.curPage,
+		let curBg = " bg-" + this.props.curBg,
 			contactActive = "";
 		
 		var cloudRender = this.state.clouds.map((obj, i) => {

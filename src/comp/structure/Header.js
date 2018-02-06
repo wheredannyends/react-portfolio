@@ -3,23 +3,19 @@ import React, { Component } from 'react';
 class Header extends Component {
 	render() {
 		
-		let darkActive = "",
-			navActive = "";
+		let navActive = "",
+			curPage = this.props.curPage;
 		
-		if (this.props.curPage === "contact") {
-			darkActive = " header-dark";
-		}
-		
-		if (this.props.curPage === "about") {
+		if (curPage === "about") {
 			navActive = " nav-active-1"
-		} else if (this.props.curPage === "work") {
+		} else if (curPage === "work" || curPage === "casestudy") {
 			navActive = " nav-active-2"
-		} else if (this.props.curPage === "contact") {
+		} else if (curPage === "contact") {
 			navActive = " nav-active-3"
 		}
 		
 		return (
-			<header className={"header" + darkActive}>
+			<header className="header">
 				<div className="wrap flex">
 					<svg className="db-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" onClick={this.props.navigate.bind(this, "home")}>
 						<path className="db-logo-ray" d="M210,0C94,0,0,94,0,210a210.82,210.82,0,0,0,4.57,43.7l9.11-5.5A200.19,200.19,0,0,1,10,210C10,99.72,99.72,10,210,10S410,99.72,410,210a200.68,200.68,0,0,1-2.38,30.86l9.23,5.57A211.28,211.28,0,0,0,420,210C420,94,326,0,210,0Z"/>

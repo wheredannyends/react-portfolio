@@ -1,0 +1,30 @@
+.work-card {
+	width: 32%;
+	margin-bottom: 2%;
+	padding: 25px 0;
+	box-sizing: border-box;
+	color: $white;
+	background-color: $secondary-light;
+	box-shadow: $shadow-1;
+	transition: all .3s;
+	flex-direction: column;
+	img {
+		height: 180px;
+		margin-bottom: 20px;
+		filter: $filter-shadow-3;
+		transition: filter .3s;
+	}
+	&:hover {
+		box-shadow: $shadow-3;
+		background-color: $less-white;
+		color: $secondary;
+		transform: translateY(-5px);
+		cursor: pointer;
+		img {
+			filter: $filter-shadow-1;
+		}
+	}
+	@include media($mq-small) {
+		margin-bottom: 5%;
+	}
+}

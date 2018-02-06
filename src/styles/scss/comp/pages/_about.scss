@@ -1,28 +1,72 @@
 .about {
 	color: $white;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 	> .flex {
-		height: auto;
-		flex-direction: row;
-		justify-content: flex-start;
-		padding: 50px 0;
-	}
-}
-
-.profile {
-	width: 100%;
-	&.flex {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
 	}
+}
+
+.profile-left {
+	width: 30%;
+	&.flex {
+		flex-direction: row;
+		justify-content: space-between;
+		@include media($mq-small) {
+			justify-content: center;
+		}
+	}
 	img {
-		width: 35%;
+		width: 100%;
+		margin-bottom: 25px;
+		border: 3px solid $primary-light;
+		box-sizing: border-box;
+		box-shadow: $shadow-1;
+		transition: all 0.3s;
+		@include media($mq-small) {
+			width: 75%;
+		}
+	}
+	.profile-left-fact {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 10px;
+		margin-bottom: 10px;
+		background-color: $primary-light;
+		box-sizing: border-box;
+		h3 {
+			color: $primary;
+		}
+		p {
+			color: $primary-dark;
+			&:nth-child(3) {
+				font-style: italic;
+				font-size: .9em;
+			}
+		}
+		@include media($mq-small) {
+			width: 100%;
+		}
+	}
+	@include media($mq-small) {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+.profile-right {
+	width: 65%;
+	h3 {
+		width: 100%;
 		margin-bottom: 20px;
+		color: $primary-light;
 	}
 	p {
-		width: 60%;
-		margin: 20px 0;
+		line-height: 1.5em;
+		margin-bottom: 20px;
+	}
+	@include media($mq-small) {
+		width: 100%;
 	}
 }

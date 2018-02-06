@@ -2,23 +2,44 @@ import React, { Component } from 'react';
 
 class About extends Component {
 	render() {
-		let compDisp = null;
+		let dbFacts = this.props.data.facts.map((obj, i) => {
+			let val2 = null;
+			
+			if (obj.val2) {
+				val2 = (
+					<p>{obj.val2}</p>
+				);
+			}
+			
+			return (
+				<article key={i} className="profile-left-fact flex">
+					<h3>{obj.key}</h3>
+					<p>{obj.val}</p>
+					{val2}
+				</article>
+			);
+		});
 		
-		if (this.props.pageTrans === false) {
-			compDisp = (
-				<div className="about">
-					<div className="wrap flex">
-						<div className="profile flex">
-							<img src={require('../../img/db/headshot_sq.jpg')} alt="Headshot" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione a vel dicta voluptate distinctio totam, hic sunt, cumque, sint veniam suscipit! Nostrum laborum officia error delectus, architecto cumque perferendis iure, eos aliquid, consectetur voluptatum fuga recusandae commodi hic dicta temporibus esse alias. Assumenda placeat minus repellat pariatur eaque laudantium similique nisi iure, suscipit asperiores! Cum fugiat dignissimos, accusantium aperiam perspiciatis atque tenetur sapiente, perferendis repellat nostrum assumenda similique cupiditate sint pariatur natus dolorem quo distinctio voluptate illum harum. Quam facilis pariatur temporibus ipsam possimus nam, perferendis accusamus. Architecto eum alias quis soluta nobis corporis quas? Iusto rerum debitis quidem minima!
-								</p>
-						</div>
+		return (
+			<div className="about">
+				<div className="wrap flex">
+					<div className="profile-left flex">
+						<img src={require('../../img/db/headshot_sq.jpg')} alt="Headshot" />
+						{dbFacts}
+					</div>
+		
+					<div className="profile-right flex">
+						<h3>Hi, I'm Danny.</h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!</p>
 					</div>
 				</div>
-			);
-		}
-		
-		return compDisp;
+			</div>
+		);
 	}
 }
 

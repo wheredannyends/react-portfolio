@@ -1,0 +1,27 @@
+.contact {
+	height: calc(100vh - 200px);
+	.social {
+		height: auto;
+		h3 {
+			color: $primary-light;
+			margin-bottom: 20px;
+		}
+		.social-links {
+			width: 100%;
+			justify-content: space-between;
+			a {
+				background-color: $primary-light;
+				color: $primary-dark;
+				width: 70px;
+				height: 70px;
+				text-decoration: none;
+				i {
+					font-size: 2em;
+				}
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}

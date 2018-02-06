@@ -5,17 +5,29 @@ $less-white: #c9c9c9;
 $less-black: #4d4d4d;
 $black: #34383c;
 
-$primary: #28AFB0;
-$primary-light: #62C4C5;
-$primary-dark: #1E8081;
+//$primary: #28AFB0;
+//$primary-light: #62C4C5;
+//$primary-dark: #1E8081;
+//
+//$secondary: #4F345A;
+//$secondary-light: #7F6B87;
+//$secondary-dark: #3A2642;
+//
+//$cta: #E26D5C;
+//$cta-light: #E99488;
+//$cta-dark: #A55043;
 
-$secondary: #4F345A;
-$secondary-light: #7F6B87;
-$secondary-dark: #3A2642;
+$primary: #62929E;
+$primary-light: #9BB9C1;
+$primary-dark: #3F5D65;
 
-$cta: #E26D5C;
-$cta-light: #E99488;
-$cta-dark: #A55043;
+$secondary: #525B76;
+$secondary-light: #9096A7;
+$secondary-dark: #353A4C;
+
+$cta: #E07A5F;
+$cta-light: #E5927C;
+$cta-dark: #B8644E;
 
 
 $shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12),
@@ -29,14 +41,15 @@ $shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25),
 $shadow-5: 0 19px 38px rgba(0, 0, 0, 0.30),
 0 15px 12px rgba(0, 0, 0, 0.22);
 
-$filter-shadow-1: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
-$filter-shadow-2: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.23));
-$filter-shadow-3: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.23));
+$filter-shadow-1: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.44));
+$filter-shadow-2: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.43));
+$filter-shadow-3: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.43));
 
+/* MEDIA QUERY SETTINGS */
 
-/* MIXINS */
-
-$media-mobile: 700px;
+$mq-medium: 1000px;
+$mq-small: 750px;
+$mq-mobile: 500px;
 
 @mixin media($width) {
 	@media screen and (max-width: $width) {
@@ -44,24 +57,21 @@ $media-mobile: 700px;
 	}
 }
 
-
 /* SETTINGS */
 
 body {
 	font-family: 'Lato', 'Helvetica', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	color: $black;
 }
 
 .wrap {
 	max-width: 1240px;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 }
 
 .flex {
-	width: 95%;
-	height: inherit;
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -70,7 +80,11 @@ body {
 }
 
 .section {
-	padding: 10vh 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	> .flex {
+		padding: 20px 0 100px 0;
+	}
 }
 
 /* BUTTONS */
@@ -88,8 +102,11 @@ body {
 	cursor: pointer;
 	transition: all 0.2s;
 	border: none;
+	box-shadow: $shadow-1;
 	&:hover {
-		background-color: $cta-light;
+		background-color: $cta-dark;
+		box-shadow: $shadow-2;
+		transform: translateY(-3px);
 	}
 	&:focus {
 		outline: none;
@@ -109,44 +126,40 @@ h4,
 h5,
 p {
 	margin: 0;
+	padding: 0;
 }
 
 h1 {
 	font-family: 'Raleway', 'Helvetica', sans-serif;
-	font-weight: 900;
+	font-weight: 800;
 	font-size: 3.5rem;
 	text-transform: uppercase;
-	@include media($media-mobile) {
+	@include media($mq-small) {
 		font-size: 2.5rem;
 	}
 }
 
 h2 {
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 2.25em;
 	font-style: italic;
-	@include media($media-mobile) {
+	@include media($mq-small) {
 		font-size: 1.7rem;
 	}
 }
 
 h3 {
-	font-family: 'Lato', 'Helvetica', sans-serif;
-	font-weight: 300;
-	font-size: 1.2rem;
-}
-
-@media only screen and (max-width:700px) {
-	h3 {
-		padding: 0 5%;
-	}
+	font-family: 'Raleway', 'Helvetica', sans-serif;
+	font-weight: 800;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 5px;
 }
 
 h4 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.5em;
-	font-weight: 900;
-	margin-bottom: 10px;
+	font-size: 1.2em;
+	font-weight: 300;
+	font-style: italic;
 }
 
 h5 {

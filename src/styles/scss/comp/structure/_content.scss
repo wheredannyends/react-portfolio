@@ -1,13 +1,17 @@
 .content {
+	opacity: 0;
 	width: 100vw;
+	padding: 25px 0;
+	box-sizing: border-box;
 	height: calc(100vh - 100px);
-	transition: all 0.3s;
-	.flex {
-		height: 100%;
-		flex-direction: column;
-	}
+	animation: fade-in .5s forwards .25s;
+	transform: scale(.95);
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	&.content-transition {
-		opacity: 0;
+		opacity: 1;
+		transform: scale(1);
+		animation: fade-out .5s forwards;
 		pointer-events: none;
 	}
 }

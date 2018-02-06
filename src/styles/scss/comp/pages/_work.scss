@@ -1,11 +1,20 @@
 .work {
 	color: $white;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	>.flex {
-		height: auto;
+	> .flex {
 		flex-direction: row;
-		justify-content: flex-start;
-		padding: 50px 0;
+		justify-content: space-between;
+	}
+	@include media(1000px) {
+		.work-card {
+			width: 48%;
+		}
+	}
+	@include media($mq-small) {
+		> .flex {
+			justify-content: center;
+		}
+		.work-card {
+			width: 100%;
+		}
 	}
 }

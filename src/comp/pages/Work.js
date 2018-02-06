@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
+import WorkCard from '../assets/WorkCard';
 
 class Work extends Component {
 	render() {
-		let compDisp = null;
-
-		if (this.props.pageTrans === false) {
-			compDisp = (
-				<div className="work">
-					<div className="wrap flex">
-					</div>
-				</div>
+		const workData = this.props.workData.map((obj, i) => {
+			return (
+				<WorkCard key={i} caseInd={i} data={obj} setCaseData={this.props.setCaseData} navigate={this.props.navigate} />
 			);
-		}
+		});
 		
-		return compDisp;
+		return (
+			<div className="work">
+				<div className="wrap flex">
+					{workData}
+				</div>
+			</div>
+		);
 	}
 }
 

@@ -1,5 +1,6 @@
 @import "./settings/normalize";
 @import "./settings/settings";
+@import "./settings/animations";
 
 @import "./comp/structure/background";
 @import "./comp/structure/header";
@@ -8,7 +9,10 @@
 @import "./comp/pages/home";
 @import "./comp/pages/about";
 @import "./comp/pages/work";
+@import "./comp/pages/casestudy";
 @import "./comp/pages/contact";
+
+@import "./comp/assets/workcard";
 
 .main-container {
 	position: absolute;
