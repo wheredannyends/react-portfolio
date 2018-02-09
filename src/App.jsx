@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
 
-import Header from './comp/structure/Header';
-import Background from './comp/structure/Background';
-import Content from './comp/structure/Content';
+import Header from './comp/structure/Header.jsx';
+import Background from './comp/structure/Background.jsx';
+import Content from './comp/structure/Content.jsx';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		
 		this.state = {
-			curPage: "work",
-			curBg: "work",
+			curPage: "home",
+			curBg: "home",
 			pageTrans: false,
 			caseInd: 0,
 			data: {
 				dbData: {
+					bio: [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!",
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!",
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur aut delectus odit dicta hic accusantium quidem quod commodi asperiores qui? Expedita, porro, est. Esse distinctio dignissimos illum itaque inventore temporibus necessitatibus commodi, soluta voluptatibus, maxime omnis hic eveniet, nostrum laboriosam quia provident quibusdam, mollitia ipsa. Quam aliquid magni eligendi!",
+					],
 					facts: [
 						{
-							key: "Name",
+							title: "Name",
 							val: "Danny Burton",
 						},
 						{
-							key: "Location",
+							title: "Location",
 							val: "Vancouver, BC, Canada",
 						},
 						{
-							key: "Education",
+							title: "Education",
 							val: "British Columbia Institute of Technology",
-							val2: "Digital Design & Development - Diploma",
+							desc: "Digital Design & Development - Diploma",
 						},
 					],
 					social: [
@@ -47,7 +52,57 @@ class App extends Component {
 							url: "http://codepen.io/wheredannyends/",
 							icon: "icon ion-social-codepen",
 						},
-					]
+					],
+					skills: [
+						{
+							title: "HTML5",
+							icon: "devicon-html5-plain"
+						},
+						{
+							title: "CSS3",
+							icon: "devicon-css3-plain"
+						},
+						{
+							title: "JavaScript",
+							icon: "devicon-javascript-plain"
+						},
+						{
+							title: "React",
+							icon: "devicon-react-original"
+						},
+						{
+							title: "Illustrator",
+							icon: "devicon-illustrator-plain"
+						},
+						{
+							title: "Photoshop",
+							icon: "devicon-photoshop-plain"
+						},
+						{
+							title: "Git",
+							icon: "devicon-git-plain"
+						},
+						{
+							title: "WordPress",
+							icon: "devicon-wordpress-plain"
+						},
+						{
+							title: "Sass",
+							icon: "devicon-sass-original"
+						},
+						{
+							title: "jQuery",
+							icon: "devicon-jquery-plain"
+						},
+						{
+							title: "Node.js",
+							icon: "devicon-nodejs-plain"
+						},
+						{
+							title: "Bootstrap",
+							icon: "devicon-bootstrap-plain"
+						}
+					],
 				},
 				workData: [
 					{
@@ -56,8 +111,8 @@ class App extends Component {
 						role: "Development, UI Design",
 						timeline: "January - May 2017",
 						website: "http://www.dannyburton.ca/berriton",
-						description: "Berriton was the combined final project for 4 courses in my second term at BCIT. I was in charge of the UI design and development aspects. Our team was required to create an interactive mobile web application and spanned the entire design and development process from ideation to deployment.",
-						process: "Berriton was the combined final project for 4 courses in my second term at BCIT. I was in charge of the UI design and development aspects. Our team was required to create an interactive mobile web application and spanned the entire design and development process from ideation to deployment.",
+						description: "Berriton was the combined final project for 4 courses in my second term at BCIT. I was the sole developer on the project, and also designed interactive UI elements. Our team was required to create an interactive mobile web application and spanned the entire design and development process from ideation to deployment.",
+						process: "Berriton was the combined final project for 4 courses in my second term at BCIT. I was the sole developer on the project, and also designed interactive UI elements. Our team was required to create an interactive mobile web application and spanned the entire design and development process from ideation to deployment.",
 						tech: [
 							{
 								title: "HTML5",
@@ -274,6 +329,20 @@ class App extends Component {
 		}, 300);
 	}
 	
+	casePrev = (nextInd) => {
+		let newInd = nextInd;
+		
+		if (nextInd < 0) {
+			newInd = this.state.data.workData.length;
+		}
+		
+		setTimeout(() => {
+			this.setState({
+				caseInd: newInd,
+			});
+		}, 300);
+	}
+	
 	render() {
 		return (
 			<main className="main-container">
@@ -294,6 +363,7 @@ class App extends Component {
 					caseData={this.state.caseData}
 					caseInd={this.state.caseInd}
 					caseNext={this.caseNext}
+					casePrev={this.casePrev}
 				/>
 			</main>
 		);

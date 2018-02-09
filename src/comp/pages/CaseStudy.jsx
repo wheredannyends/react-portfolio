@@ -6,6 +6,7 @@ class CaseStudy extends Component {
 		
 		this.state = {
 			curImg: this.props.data[this.props.caseInd].images[0],
+			curImgInd: 0,
 			imgTrans: false,
 		}
 	}
@@ -20,15 +21,34 @@ class CaseStudy extends Component {
 		}, 300);
 	}
 	
-	imgChange = (imgInd) => {
-		if (this.state.curImg !== this.props.data[this.props.caseInd].images[imgInd]) {
+	handlePrev = (prevInd) => {
+		this.props.navigate("casestudy");
+		this.props.caseNext(prevInd);
+		setTimeout(() => {
+			this.setState({
+				curImg: this.props.data[prevInd].images[0],
+			});
+		}, 300);
+	}
+	
+	imgChange = (ind) => {
+		const imgArr = this.props.data[this.props.caseInd].images;
+		
+		if (ind < 0) {
+			ind = imgArr.length - 1;
+		} else if (ind > imgArr.length - 1) {
+			ind = 0;
+		}
+		
+		if (this.state.curImg !== imgArr[ind]) {
 			this.setState({
 				imgTrans: true,
 			});
 
 			setTimeout(() => {
 				this.setState({
-					curImg: this.props.data[this.props.caseInd].images[imgInd],
+					curImg: imgArr[ind],
+					curImgInd: ind,
 					imgTrans: false,
 				});
 			}, 300);
@@ -40,6 +60,7 @@ class CaseStudy extends Component {
 			  data = this.props.data[caseInd];
 		
 		let nextInd = caseInd + 1,
+			prevInd = caseInd - 1,
 			imgTrans = "";
 		
 		const techItems = data.tech.map((obj, i) => {
@@ -53,7 +74,7 @@ class CaseStudy extends Component {
 		
 		const imgThumbs = data.images.map((obj, i) => {
 			return (
-				<div className="cs-gallery-thumb flex">
+				<div key={i} className="cs-gallery-thumb flex">
 					<img src={require('../../img/work/mockups/' + obj)} alt={data.title + ' Image'} onClick={this.imgChange.bind(this, i)} />
 				</div>
 			);
@@ -61,6 +82,10 @@ class CaseStudy extends Component {
 		
 		if (nextInd >= this.props.data.length) {
 			nextInd = 0;
+		}
+
+		if (prevInd < 0) {
+			prevInd = this.props.data.length - 1;
 		}
 	
 		if (this.state.imgTrans) {
@@ -73,7 +98,7 @@ class CaseStudy extends Component {
 					<div className="cs-header flex">
 						<div className="cs-header-button flex" onClick={this.props.navigate.bind(this, "work")}>
 							<i className="icon ion-ios-close-empty"></i>
-							<h4>Close</h4>
+							<h4>Back</h4>
 						</div>
 						<h1>{data.title}</h1>
 						<div className="cs-header-button flex" onClick={this.handleNext.bind(this, (nextInd))}>
@@ -83,7 +108,11 @@ class CaseStudy extends Component {
 					</div>
 							
 					<div className="cs-left flex">
-						<img src={require('../../img/work/mockups/' + this.state.curImg)} alt={data.title + ' Mockup'} className={"cs-left-image" + imgTrans}/>
+						<div className="cs-left-image flex">
+							<i className="icon ion-ios-arrow-left" onClick={this.imgChange.bind(this, (this.state.curImgInd - 1))}></i>
+							<img src={require('../../img/work/mockups/' + this.state.curImg)} alt={data.title + ' Mockup'} className={imgTrans}/>
+							<i className="icon ion-ios-arrow-right" onClick={this.imgChange.bind(this, (this.state.curImgInd + 1))}></i>
+						</div>
 						<div className="cs-gallery flex">
 							{imgThumbs}
 						</div>

@@ -16,7 +16,6 @@ $black: #34383c;
 //$cta: #E26D5C;
 //$cta-light: #E99488;
 //$cta-dark: #A55043;
-
 $primary: #62929E;
 $primary-light: #9BB9C1;
 $primary-dark: #3F5D65;
@@ -80,11 +79,7 @@ body {
 }
 
 .section {
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	> .flex {
-		padding: 20px 0 100px 0;
-	}
+	padding: 20px 0 100px 0;
 }
 
 /* BUTTONS */

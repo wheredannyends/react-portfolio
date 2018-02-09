@@ -42,6 +42,7 @@ class Content extends Component {
 				<CaseStudy
 					data={this.props.data.workData}
 					caseNext={this.props.caseNext}
+					casePrev={this.props.casePrev}
 					caseInd={this.props.caseInd}
 					navigate={this.props.navigate}
 				/>

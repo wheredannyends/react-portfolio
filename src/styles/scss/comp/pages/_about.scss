@@ -18,7 +18,7 @@
 	}
 	img {
 		width: 100%;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		border: 3px solid $primary-light;
 		box-sizing: border-box;
 		box-shadow: $shadow-1;
@@ -65,6 +65,37 @@
 	p {
 		line-height: 1.5em;
 		margin-bottom: 20px;
+		&:last-of-type {
+			margin-bottom: 30px;
+		}
+	}
+	.profile-skills {
+		width: 100%;
+		justify-content: space-between;
+		color: $primary-light;
+		padding: 30px 0;
+		margin-bottom: 25px;
+		box-sizing: border-box;
+//		border: 2px solid $primary-light;
+		h3 {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		article {
+			width: 15%;
+			flex-direction: column;
+			margin-top: 20px;
+			i {
+				font-size: 3em;
+			}
+			p {
+				font-style: italic;
+				margin-bottom: 0;
+			}
+			@include media($mq-small) {
+				width: 25%;
+			}
+		}
 	}
 	@include media($mq-small) {
 		width: 100%;

@@ -410,10 +410,7 @@ body {
   flex-wrap: wrap; }
 
 .section {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
-  .section > .flex {
-    padding: 20px 0 100px 0; }
+  padding: 20px 0 100px 0; }
 
 /* BUTTONS */
 .button {
@@ -733,7 +730,7 @@ p {
         justify-content: center; } }
   .profile-left img {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border: 3px solid #9BB9C1;
     box-sizing: border-box;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -773,6 +770,30 @@ p {
   .profile-right p {
     line-height: 1.5em;
     margin-bottom: 20px; }
+    .profile-right p:last-of-type {
+      margin-bottom: 30px; }
+  .profile-right .profile-skills {
+    width: 100%;
+    justify-content: space-between;
+    color: #9BB9C1;
+    padding: 30px 0;
+    margin-bottom: 25px;
+    box-sizing: border-box; }
+    .profile-right .profile-skills h3 {
+      text-align: center;
+      margin-bottom: 10px; }
+    .profile-right .profile-skills article {
+      width: 15%;
+      flex-direction: column;
+      margin-top: 20px; }
+      .profile-right .profile-skills article i {
+        font-size: 3em; }
+      .profile-right .profile-skills article p {
+        font-style: italic;
+        margin-bottom: 0; }
+      @media screen and (max-width: 750px) {
+        .profile-right .profile-skills article {
+          width: 25%; } }
   @media screen and (max-width: 750px) {
     .profile-right {
       width: 100%; } }
@@ -810,14 +831,13 @@ p {
   animation: fade-in-dir 1s forwards .3s;
   flex-direction: row;
   justify-content: space-between; }
-  .cs-header h1 {
-    margin-left: 20px; }
-    @media screen and (max-width: 750px) {
-      .cs-header h1 {
-        font-size: 1.5em; } }
+  @media screen and (max-width: 750px) {
+    .cs-header h1 {
+      font-size: 1.5em; } }
   .cs-header .cs-header-button {
     transition: transform 0.2s;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: flex-start; }
     .cs-header .cs-header-button i {
       font-size: 3em;
       height: 1em; }
@@ -837,6 +857,8 @@ p {
         animation: next-anim .3s forwards; }
     .cs-header .cs-header-button:nth-child(1):hover i {
       animation: close-anim .3s forwards; }
+    .cs-header .cs-header-button:last-of-type {
+      align-items: flex-end; }
 
 .cs-left {
   width: 47.5%;
@@ -845,13 +867,24 @@ p {
   transform: translateX(-20px);
   animation: fade-in-dir 1s forwards .6s; }
   .cs-left .cs-left-image {
-    max-height: 400px;
-    max-width: 95%;
-    margin-bottom: 35px;
-    transition: all .3s; }
-    .cs-left .cs-left-image.transition {
-      transform: scale(0.9);
-      opacity: 0; }
+    width: 100%;
+    justify-content: space-between; }
+    .cs-left .cs-left-image i {
+      font-size: 3em;
+      transition: all .2s; }
+      .cs-left .cs-left-image i:hover {
+        cursor: pointer;
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-3px);
+        color: #c9c9c9; }
+    .cs-left .cs-left-image img {
+      max-height: 400px;
+      max-width: 85%;
+      margin-bottom: 35px;
+      transition: all .3s; }
+      .cs-left .cs-left-image img.transition {
+        transform: scale(0.9);
+        opacity: 0; }
   .cs-left .button {
     margin: 50px 0;
     width: 60%; }
