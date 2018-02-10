@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 import Header from './comp/structure/Header.jsx';
 import Background from './comp/structure/Background.jsx';
 import Content from './comp/structure/Content.jsx';
+
+export const initGA = () => {
+	console.log('GA Init');
+	ReactGA.initialize('UA-96324378-3');
+}
+
+export const logPageView = () => {
+	ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 class App extends Component {
 	constructor(props) {
@@ -37,18 +47,22 @@ class App extends Component {
 					],
 					social: [
 						{
+							title: "LinkedIn",
 							url: "https://www.linkedin.com/in/wheredannyends/",
 							icon: "icon ion-social-linkedin",
 						},
 						{
+							title: "Instagram",
 							url: "http://www.instagram.com/index.psd/",
 							icon: "icon ion-social-instagram",
 						},
 						{
+							title: "Github",
 							url: "http://github.com/wheredannyends",
 							icon: "icon ion-social-github",
 						},
 						{
+							title: "Codepen",
 							url: "http://codepen.io/wheredannyends/",
 							icon: "icon ion-social-codepen",
 						},
@@ -258,6 +272,11 @@ class App extends Component {
 		}
 	}
 	
+	componentDidMount() {
+		initGA();
+		logPageView();
+	}
+	
 	navigate = (path) => {
 		if ((path === "casestudy" && this.state.curPage === "work") || (path === "work" && this.state.curPage === "casestudy")) {
 			this.setState({
@@ -271,6 +290,12 @@ class App extends Component {
 					pageTrans: false,
 				});
 			}, 300);
+			
+			ReactGA.event({
+				category: 'Navigation',
+				action: 'Viewed Case Study',
+				label: this.state.data.workData[this.state.caseInd + 1].title
+			});
 		} else if (path === "casestudy" && this.state.curPage === "casestudy") {
 			this.setState({
 				pageTrans: true,
@@ -283,6 +308,12 @@ class App extends Component {
 					pageTrans: false,
 				});
 			}, 300);
+			
+			ReactGA.event({
+				category: 'Navigation',
+				action: 'Viewed Case Study',
+				label: this.state.data.workData[this.state.caseInd + 1].title
+			});
 		} else if (path !== this.state.curPage) {
 			this.setState({
 				pageTrans: true,
@@ -306,6 +337,13 @@ class App extends Component {
 					});
 				}, 500);
 			}, 500);
+			
+			if (path !== "home") {
+				ReactGA.event({
+					category: 'Navigation',
+					action: path
+				});
+			}
 		}
 	}
 	

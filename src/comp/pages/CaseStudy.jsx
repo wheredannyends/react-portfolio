@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 class CaseStudy extends Component {
 	constructor(props) {
@@ -53,6 +54,13 @@ class CaseStudy extends Component {
 				});
 			}, 300);
 		}
+	}
+	
+	trackLink = (title) => {
+		ReactGA.event({
+			category: 'Viewed Completed Project',
+			action: title
+		});
 	}
 	
 	render() {
@@ -116,7 +124,7 @@ class CaseStudy extends Component {
 						<div className="cs-gallery flex">
 							{imgThumbs}
 						</div>
-						<a href={data.website} target="_blank" className="button">Visit Website</a>
+						<a href={data.website} target="_blank" className="button" onClick={this.trackLink.bind(this, data.title)}>Visit Website</a>
 					</div>
 						
 					<div className="cs-right flex">
