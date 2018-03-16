@@ -5,17 +5,6 @@ $less-white: #c9c9c9;
 $less-black: #4d4d4d;
 $black: #34383c;
 
-//$primary: #28AFB0;
-//$primary-light: #62C4C5;
-//$primary-dark: #1E8081;
-//
-//$secondary: #4F345A;
-//$secondary-light: #7F6B87;
-//$secondary-dark: #3A2642;
-//
-//$cta: #E26D5C;
-//$cta-light: #E99488;
-//$cta-dark: #A55043;
 $primary: #62929E;
 $primary-light: #9BB9C1;
 $primary-dark: #3F5D65;
@@ -57,6 +46,10 @@ $mq-mobile: 500px;
 }
 
 /* SETTINGS */
+
+html {
+	overflow: hidden;
+}
 
 body {
 	font-family: 'Lato', 'Helvetica', sans-serif;

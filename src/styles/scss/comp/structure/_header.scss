@@ -2,7 +2,7 @@
 	opacity: 0;
 	height: 100px;
 	animation: header-appear .5s forwards .5s;
-	transform: translateY(-50px);
+	transform: translateY(-30px) rotateX(-60deg);
 	> .flex {
 		height: inherit;
 		justify-content: space-between;

@@ -1,0 +1,377 @@
+{
+	"dbData": {
+		"bio": [
+			"I am a Front-end Developer based in Vancouver, BC. I love transforming problems into beautiful, intuitive user-interfaces. I am always looking for ways to further my craft, and looking for new projects to explore.",
+			"During my time in the Digital Design and Development program at BCIT, I learned how to take small ideas, design them with the user in mind, develop them into websites and web applications, and market the finished product. I excelled in the program, receiving the Peter Campin Memorial Award for academic excellence and leadership. I was also chosen as our class president, and represented our school and program at multiple events.",
+			"When I'm not working on projects, I enjoy keeping an active lifestyle, eating at over-priced restaurants, travelling to new places, and binging through the TV shows that everybody else has already watched."
+		],
+		"facts": [
+			{
+				"title": "Name",
+				"val": "Danny Burton"
+			},
+			{
+				"title": "Location",
+				"val": "Vancouver, BC, Canada"
+			},
+			{
+				"title": "Education",
+				"val": "British Columbia Institute of Technology",
+				"desc": "Digital Design & Development - Diploma"
+			}
+		],
+		"social": [
+			{
+				"title": "LinkedIn",
+				"url": "https://www.linkedin.com/in/wheredannyends/",
+				"icon": "icon ion-social-linkedin"
+			},
+			{
+				"title": "Instagram",
+				"url": "http://www.instagram.com/index.psd/",
+				"icon": "icon ion-social-instagram"
+			},
+			{
+				"title": "Github",
+				"url": "http://github.com/wheredannyends",
+				"icon": "icon ion-social-github"
+			},
+			{
+				"title": "Codepen",
+				"url": "http://codepen.io/wheredannyends/",
+				"icon": "icon ion-social-codepen"
+			}
+		],
+		"skills": [
+			{
+				"title": "HTML5",
+				"icon": "devicon-html5-plain"
+			},
+			{
+				"title": "CSS3",
+				"icon": "devicon-css3-plain"
+			},
+			{
+				"title": "JavaScript",
+				"icon": "devicon-javascript-plain"
+			},
+			{
+				"title": "React",
+				"icon": "devicon-react-original"
+			},
+			{
+				"title": "Illustrator",
+				"icon": "devicon-illustrator-plain"
+			},
+			{
+				"title": "Photoshop",
+				"icon": "devicon-photoshop-plain"
+			},
+			{
+				"title": "Git",
+				"icon": "devicon-git-plain"
+			},
+			{
+				"title": "WordPress",
+				"icon": "devicon-wordpress-plain"
+			},
+			{
+				"title": "Sass",
+				"icon": "devicon-sass-original"
+			},
+			{
+				"title": "jQuery",
+				"icon": "devicon-jquery-plain"
+			},
+			{
+				"title": "Node.js",
+				"icon": "devicon-nodejs-plain"
+			},
+			{
+				"title": "Bootstrap",
+				"icon": "devicon-bootstrap-plain"
+			}
+		]
+	},
+	"workData": [
+		{
+			"title": "Berriton",
+			"subtitle": "Interactive Story Game",
+			"role": "Development, UI Design",
+			"deliverables": [
+				"Interactive Web Application",
+				"Programmed in vanilla JavaScript",
+				"Intuitive UI"
+			],
+			"timeline": "January - May 2017",
+			"website": "http://www.dannyburton.ca/berriton",
+			"description": "Berriton is an interactive point-and-click game. Users are taken on an adventure throughout the land, where they collect berries and use them to unravel the mysteries Berriton has to offer",
+			"process": "Berriton was the combined final project for 4 courses in my second term at BCIT. As the main developer for the project, I was responsible for coding the majority of the game's functionality. Along the way, I realized that to create a more intuitive user interface, I had to design several UI elements and interactive menus. This project resulted in a perfect mark, and has been shown to following classes as an example of good work",
+			"tech": [
+				{
+					"title": "HTML5",
+					"icon": "devicon-html5-plain"
+				},
+				{
+					"title": "CSS3",
+					"icon": "devicon-css3-plain"
+				},
+				{
+					"title": "Sass",
+					"icon": "devicon-sass-original"
+				},
+				{
+					"title": "JavaScript",
+					"icon": "devicon-javascript-plain"
+				},
+				{
+					"title": "Git",
+					"icon": "devicon-git-plain"
+				}
+			],
+			"images": [
+				"berriton_cover.png",
+				"berriton_1.png",
+				"berriton_2.png",
+				"berriton_3.png"
+			],
+			"tags": [
+				"all",
+				"dev",
+				"ui"
+			]
+		},
+		{
+			"title": "FamJam",
+			"subtitle": "Family Organization App",
+			"role": "Development, UI Design",
+			"deliverables": [
+				"Interactive Web Application",
+				"Use of REST APIs",
+				"Client and server side programming"
+			],
+			"timeline": "January - March 2018",
+			"website": "http://quiet-brook-15828.herokuapp.com/",
+			"description": "FamJam paves the path to household efficiency by seamlessly bringing together the family calendar, shopping list, chores list and group message. These are the 4 most important aspects for an organized household and FamJam includes them all in one easy to use application.",
+			"process": "FamJam was the last major project done during my time at BCIT that required our group to create a full-stack web application. We used a MERN stack to build the application, and launched it using Heroku's cloud hosting. As of now, the app is still under development, with plans to convert it into a native mobile app.",
+			"tech": [
+				{
+					"title": "React",
+					"icon": "devicon-react-original"
+				},
+				{
+					"title": "Node.js",
+					"icon": "devicon-nodejs-plain"
+				},
+				{
+					"title": "MongoDB",
+					"icon": "devicon-mongodb-plain"
+				},
+				{
+					"title": "Express",
+					"icon": "devicon-express-original"
+				},
+				{
+					"title": "Heroku",
+					"icon": "devicon-heroku-original"
+				}
+			],
+			"images": [
+				"famjam_cover.png",
+				"famjam_1.png",
+				"famjam_2.png",
+				"famjam_3.png"
+			],
+			"tags": [
+				"all",
+				"dev",
+				"ui"
+			]
+		},
+		{
+			"title": "Proxy",
+			"subtitle": "iOS/Android App",
+			"role": "Front-End Development",
+			"deliverables": [
+				"Mobile application built with React Native",
+				"Implementation of RESTful APIs",
+				"Geolocation and geofencing functionality"
+			],
+			"timeline": "September - December 2017",
+			"website": "exp://exp.host/@alessandro92/proxy",
+			"description": "Proxy is an app that allows users to set location-based alarms and notifications to let them make the most of their time on transit.",
+			"process": "This project was the biggest and most significant project during my time at BCIT. As one of the developers of the project, I was responsible for taking the mockups from the design team, and developing the UI in React Native. I also worked with the other developer in implementing Google and Facebook APIs, as well as enabling location tracking functionalities. At the end of the term, we presented the project to our peers and a panel of industry representatives, one of which showed further interest, and offered to aid in further development and release of the application",
+			"tech": [
+				{
+					"title": "React Native",
+					"icon": "devicon-react-original"
+				},
+				{
+					"title": "Google APIs",
+					"icon": "devicon-google-plain"
+				},
+				{
+					"title": "JavaScript",
+					"icon": "devicon-javascript-plain"
+				},
+				{
+					"title": "Git",
+					"icon": "devicon-git-plain"
+				},
+				{
+					"title": "Slack",
+					"icon": "devicon-slack-plain"
+				}
+			],
+			"images": [
+				"proxy_cover.png",
+				"proxy_1.png",
+				"proxy_2.png",
+				"proxy_3.png"
+			],
+			"tags": [
+				"all",
+				"dev"
+			]
+		},
+		{
+			"title": "DAQI Izakaya",
+			"subtitle": "Restaurant Website",
+			"role": "Development, Design",
+			"deliverables": [
+				"Responsive, multi page website",
+				"Branding and style guide creation"
+			],
+			"timeline": "September - December 2016",
+			"website": "http://www.dannyburton.ca/daqi",
+			"description": "DAQI Izakaya is a website for a fictional Japanese restaurant.",
+			"process": "This project was a combined final project for 4 courses in my first term at BCIT. The requirements for the project spanned the entire design and development process, including UX research, UI design, and development. We were required to create the branding and style guide for a fictional business, and then create a mobile-first responsive website.",
+			"tech": [
+				{
+					"title": "Illustrator",
+					"icon": "devicon-illustrator-plain"
+				},
+				{
+					"title": "HTML5",
+					"icon": "devicon-html5-plain"
+				},
+				{
+					"title": "CSS3",
+					"icon": "devicon-css3-plain"
+				},
+				{
+					"title": "jQuery",
+					"icon": "devicon-jquery-plain"
+				},
+				{
+					"title": "Git",
+					"icon": "devicon-git-plain"
+				}
+			],
+			"images": [
+				"daqi_cover.png",
+				"daqi_1.png",
+				"daqi_2.png",
+				"daqi_3.png"
+			],
+			"tags": [
+				"all",
+				"dev",
+				"ui",
+				"graphic"
+			]
+		},
+		{
+			"title": "Analogue Moderne",
+			"subtitle": "Website Redesign",
+			"role": "Front-End Development",
+			"deliverables": [
+				"Responsive landing page style website",
+				"Image and video optimization"
+			],
+			"timeline": "December 2016",
+			"website": "http://www.dannyburton.ca/analoguemoderne",
+			"description": "Analogue Moderne is an integrated media design and installation company. Since 1995, they have provided their customers with seamlessly integrated, audio/video, lighting, and related systems.",
+			"process": "I was hired to redesign and build their website to be more in line with their company's brand. I worked with the client to design a website that captured the spirit of the company, and position them in the high-class home automation market. As their business is mainly done in person, they wanted a simple landing page style website that would act as an introduction to their company and services.",
+			"tech": [
+				{
+					"title": "Photoshop",
+					"icon": "devicon-photoshop-plain"
+				},
+				{
+					"title": "HTML5",
+					"icon": "devicon-html5-plain"
+				},
+				{
+					"title": "CSS3",
+					"icon": "devicon-css3-plain"
+				},
+				{
+					"title": "JavaScript",
+					"icon": "devicon-javascript-plain"
+				},
+				{
+					"title": "jQuery",
+					"icon": "devicon-jquery-plain"
+				}
+			],
+			"images": [
+				"am_cover.png",
+				"am_1.png",
+				"am_2.png",
+				"am_3.png"
+			],
+			"tags": [
+				"all",
+				"dev"
+			]
+		},
+		{
+			"title": "St. Patrick's Day eCard",
+			"subtitle": "Interactive eCard",
+			"role": "Development, UI Design",
+			"deliverables": [
+				"Fact-based interactive eCard",
+				"Original asset creation"
+			],
+			"timeline": "January - March 2017",
+			"website": "http://www.dannyburton.ca/stpattys",
+			"description": "The St. Patrick's Day eCard is an interactive and informative eCard-like web application that takes users on a journey to discover facts about the holiday.",
+			"process": "The eCard was a midterm project for one of my classes at BCIT. We were required to implement 10 facts about a holiday of our choosing. These facts were to be hidden throughout the application, with the user having to interact with the application in order to discover them.",
+			"tech": [
+				{
+					"title": "Illustrator",
+					"icon": "devicon-illustrator-plain"
+				},
+				{
+					"title": "HTML5",
+					"icon": "devicon-html5-plain"
+				},
+				{
+					"title": "CSS3",
+					"icon": "devicon-css3-plain"
+				},
+				{
+					"title": "Sass",
+					"icon": "devicon-sass-original"
+				},
+				{
+					"title": "JavaScript",
+					"icon": "devicon-javascript-plain"
+				}
+			],
+			"images": [
+				"ecard_cover.png",
+				"ecard_1.png",
+				"ecard_2.png",
+				"ecard_3.png"
+			],
+			"tags": [
+				"all",
+				"dev",
+				"ui",
+				"graphic"
+			]
+		}
+	]
+}

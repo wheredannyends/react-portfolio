@@ -1,5 +1,8 @@
 .contact {
 	height: calc(100vh - 200px);
+	> .flex {
+		height: 100%;
+	}
 	.social {
 		height: auto;
 		h3 {
@@ -24,4 +27,8 @@
 			}
 		}
 	}
+}
+
+.lololol {
+	color: $black;
 }

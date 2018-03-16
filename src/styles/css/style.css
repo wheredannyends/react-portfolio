@@ -392,6 +392,9 @@ template {
 /* COLORS */
 /* MEDIA QUERY SETTINGS */
 /* SETTINGS */
+html {
+  overflow: hidden; }
+
 body {
   font-family: 'Lato', 'Helvetica', sans-serif;
   font-weight: 300;
@@ -524,12 +527,6 @@ p {
       @media screen and (max-width: 750px) {
         .background .bg-screen:nth-child(3) {
           height: 110vh; } }
-    .background .bg-screen.contact-active:nth-child(1) {
-      height: 70vh; }
-    .background .bg-screen.contact-active:nth-child(2) {
-      height: 160vh; }
-    .background .bg-screen.contact-active:nth-child(3) {
-      height: 70vh; }
   .background .bg-elements {
     position: absolute;
     left: 0;
@@ -538,7 +535,7 @@ p {
     .background .bg-elements.bg-clouds {
       top: 100vh; }
       .background .bg-elements.bg-clouds.contact-active {
-        transform: translateY(-60vh); }
+        transform: translateY(-10vh); }
       .background .bg-elements.bg-clouds img {
         position: absolute;
         top: 0;
@@ -589,11 +586,11 @@ p {
         .background .bg-elements.bg-clouds {
           top: 110vh; }
           .background .bg-elements.bg-clouds.contact-active {
-            transform: translateY(-50vh); } }
+            transform: none; } }
     .background .bg-elements.bg-mountains {
       top: 200vh; }
       .background .bg-elements.bg-mountains.contact-active img {
-        transform: translateY(50vh); }
+        transform: translateY(10vh); }
       .background .bg-elements.bg-mountains img {
         position: absolute;
         bottom: 0;
@@ -609,7 +606,7 @@ p {
         .background .bg-elements.bg-mountains {
           top: 190vh; }
           .background .bg-elements.bg-mountains.contact-active img {
-            transform: translateY(45vh); } }
+            transform: none; } }
   .background.bg-home, .background.bg-contact {
     top: -100%; }
   .background.bg-about {
@@ -635,7 +632,7 @@ p {
   opacity: 0;
   height: 100px;
   animation: header-appear .5s forwards .5s;
-  transform: translateY(-50px); }
+  transform: translateY(-30px) rotateX(-60deg); }
   .header > .flex {
     height: inherit;
     justify-content: space-between; }
@@ -767,10 +764,10 @@ p {
     width: 100%;
     margin-bottom: 20px;
     color: #9BB9C1; }
-  .profile-right p {
+  .profile-right > p {
     line-height: 1.5em;
     margin-bottom: 20px; }
-    .profile-right p:last-of-type {
+    .profile-right > p:last-of-type {
       margin-bottom: 30px; }
   .profile-right .profile-skills {
     width: 100%;
@@ -790,7 +787,7 @@ p {
         font-size: 3em; }
       .profile-right .profile-skills article p {
         font-style: italic;
-        margin-bottom: 0; }
+        margin-top: 5px; }
       @media screen and (max-width: 750px) {
         .profile-right .profile-skills article {
           width: 25%; } }
@@ -811,6 +808,41 @@ p {
       justify-content: center; }
     .work .work-card {
       width: 100%; } }
+
+.work-filters {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 20px; }
+  .work-filters h3 {
+    margin-right: 30px;
+    transform: translateY(3px); }
+  .work-filters article {
+    margin-right: 20px;
+    padding: 15px 25px;
+    border: 2px solid #c9c9c9;
+    color: #c9c9c9;
+    transition: all .2s; }
+    .work-filters article:hover {
+      background-color: #c9c9c9;
+      color: #353A4C;
+      cursor: pointer; }
+    .work-filters article:focus {
+      outline: none; }
+    .work-filters article.active {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2;
+      color: #525B76; }
+  @media screen and (max-width: 1000px) {
+    .work-filters {
+      padding: 0; }
+      .work-filters h3 {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center; }
+      .work-filters article {
+        margin: 5px;
+        padding: 10px 15px; } }
 
 .casestudy {
   color: #f2f2f2; }
@@ -836,8 +868,7 @@ p {
       font-size: 1.5em; } }
   .cs-header .cs-header-button {
     transition: transform 0.2s;
-    flex-direction: column;
-    align-items: flex-start; }
+    flex-direction: column; }
     .cs-header .cs-header-button i {
       font-size: 3em;
       height: 1em; }
@@ -868,7 +899,8 @@ p {
   animation: fade-in-dir 1s forwards .6s; }
   .cs-left .cs-left-image {
     width: 100%;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 30px; }
     .cs-left .cs-left-image i {
       font-size: 3em;
       transition: all .2s; }
@@ -880,21 +912,15 @@ p {
     .cs-left .cs-left-image img {
       max-height: 400px;
       max-width: 85%;
-      margin-bottom: 35px;
       transition: all .3s; }
       .cs-left .cs-left-image img.transition {
         transform: scale(0.9);
         opacity: 0; }
-  .cs-left .button {
-    margin: 50px 0;
-    width: 60%; }
-    @media screen and (max-width: 750px) {
-      .cs-left .button {
-        margin: 20px 0; } }
   .cs-left .cs-gallery {
     width: 100%;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 30px; }
     .cs-left .cs-gallery .cs-gallery-thumb {
       padding: 10px;
       box-sizing: border-box;
@@ -909,6 +935,11 @@ p {
         background-color: #9096A7;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         transform: translateY(-2px); }
+  .cs-left .button {
+    width: 60%; }
+    @media screen and (max-width: 750px) {
+      .cs-left .button {
+        margin: 20px 0; } }
   @media screen and (max-width: 750px) {
     .cs-left {
       width: 100%;
@@ -923,13 +954,14 @@ p {
   align-items: flex-start;
   flex-direction: column; }
   .cs-right .cs-right-body {
-    margin-bottom: 30px; }
-    .cs-right .cs-right-body:last-of-type {
-      margin-bottom: 50px; }
+    margin-bottom: 20px; }
+    .cs-right .cs-right-body.cs-right-del li {
+      margin-bottom: 5px; }
   .cs-right .cs-right-tech {
     width: 100%;
     justify-content: space-around;
     padding: 20px 0;
+    margin-top: 10px;
     background-color: #353A4C; }
     .cs-right .cs-right-tech h3 {
       width: 100%;
@@ -974,6 +1006,8 @@ p {
     opacity: 0; } }
 .contact {
   height: calc(100vh - 200px); }
+  .contact > .flex {
+    height: 100%; }
   .contact .social {
     height: auto; }
     .contact .social h3 {
@@ -992,6 +1026,9 @@ p {
           font-size: 2em; }
         .contact .social .social-links a:hover {
           background-color: #f2f2f2; }
+
+.lololol {
+  color: #34383c; }
 
 .work-card {
   width: 32%;

@@ -18,3 +18,48 @@
 		}
 	}
 }
+
+.work-filters {
+	width: 100%;
+	margin-bottom: 25px;
+	padding: 20px;
+	//	justify-content: flex-start;
+	h3 {
+		margin-right: 30px;
+		transform: translateY(3px);
+	}
+	article {
+		margin-right: 20px;
+		padding: 15px 25px;
+		border: 2px solid $less-white;
+		color: $less-white;
+//		border-radius: 100px;
+		transition: all .2s;
+		&:hover {
+			background-color: $less-white;
+			color: $secondary-dark;
+			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+		}
+		&.active {
+			background-color: $white;
+			border-color: $white;
+			color: $secondary;
+		}
+	}
+	@include media($mq-medium) {
+		padding: 0;
+		h3 {
+			margin-right: 0;
+			margin-bottom: 20px;
+			width: 100%;
+			text-align: center;
+		}
+		article {
+			margin: 5px;
+			padding: 10px 15px;
+		}
+	}
+}

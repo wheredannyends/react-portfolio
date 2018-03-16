@@ -20,16 +20,12 @@ class CaseStudy extends Component {
 				curImg: this.props.data[nextInd].images[0],
 			});
 		}, 300);
-	}
-	
-	handlePrev = (prevInd) => {
-		this.props.navigate("casestudy");
-		this.props.caseNext(prevInd);
-		setTimeout(() => {
-			this.setState({
-				curImg: this.props.data[prevInd].images[0],
-			});
-		}, 300);
+			
+		ReactGA.event({
+			category: 'Navigation',
+			action: 'Viewed Case Study',
+			label: this.props.data[nextInd].title
+		});
 	}
 	
 	imgChange = (ind) => {
@@ -68,7 +64,6 @@ class CaseStudy extends Component {
 			  data = this.props.data[caseInd];
 		
 		let nextInd = caseInd + 1,
-			prevInd = caseInd - 1,
 			imgTrans = "";
 		
 		const techItems = data.tech.map((obj, i) => {
@@ -88,12 +83,14 @@ class CaseStudy extends Component {
 			);
 		});
 		
+		const csDel = data.deliverables.map((obj, i) => {
+			return (
+				<li key={i}>{obj}</li>
+			);
+		});
+		
 		if (nextInd >= this.props.data.length) {
 			nextInd = 0;
-		}
-
-		if (prevInd < 0) {
-			prevInd = this.props.data.length - 1;
 		}
 	
 		if (this.state.imgTrans) {
@@ -128,10 +125,10 @@ class CaseStudy extends Component {
 					</div>
 						
 					<div className="cs-right flex">
-						<h3 className="half">Role</h3>
-						<p className="cs-right-body">{data.role}</p>
 						<h3 className="half">Timeline</h3>
 						<p className="cs-right-body">{data.timeline}</p>
+						<h3 className="half">Deliverables</h3>
+						<ul className="cs-right-body cs-right-del">{csDel}</ul>
 						<h3>Background</h3>
 						<p className="cs-right-body">{data.description}</p>
 						<h3>Process</h3>

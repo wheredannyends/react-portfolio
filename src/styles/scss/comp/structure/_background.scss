@@ -30,15 +30,15 @@
 			}
 		}
 		&.contact-active {
-			&:nth-child(1) {
-				height: 70vh;
-			}
-			&:nth-child(2) {
-				height: 160vh;
-			}
-			&:nth-child(3) {
-				height: 70vh;
-			}
+//			&:nth-child(1) {
+//				height: 100vh;
+//			}
+//			&:nth-child(2) {
+//				height: 100vh;
+//			}
+//			&:nth-child(3) {
+//				height: 100vh;
+//			}
 		}
 	}
 	.bg-elements {
@@ -49,7 +49,7 @@
 		&.bg-clouds {
 			top: 100vh;
 			&.contact-active {
-				transform: translateY(-60vh);
+				transform: translateY(-10vh);
 			}
 			img {
 				position: absolute;
@@ -119,7 +119,8 @@
 			@include media($mq-small) {
 				top: 110vh;
 				&.contact-active {
-					transform: translateY(-50vh);
+//					transform: translateY(-50vh);
+					transform: none;
 				}
 			}
 		}
@@ -127,7 +128,7 @@
 			top: 200vh;
 			&.contact-active {
 				img {
-					transform: translateY(50vh);
+					transform: translateY(10vh);
 				}
 			}
 			img {
@@ -147,7 +148,8 @@
 			@include media($mq-small) {
 				top: 190vh;
 				&.contact-active img {
-					transform: translateY(45vh);
+//					transform: translateY(45vh);
+					transform: none;
 				}
 			}
 		}

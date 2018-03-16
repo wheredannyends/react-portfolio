@@ -62,7 +62,7 @@
 		margin-bottom: 20px;
 		color: $primary-light;
 	}
-	p {
+	> p {
 		line-height: 1.5em;
 		margin-bottom: 20px;
 		&:last-of-type {
@@ -90,7 +90,7 @@
 			}
 			p {
 				font-style: italic;
-				margin-bottom: 0;
+				margin-top: 5px;
 			}
 			@include media($mq-small) {
 				width: 25%;
